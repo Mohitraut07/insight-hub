@@ -3,6 +3,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import Header from './components/header.component';
 import Card from './components/newsCard.component';
+
 function App() {
   const [articlesData, setArticlesData] = useState([]);
   const [category, setCategory] = useState('india');
@@ -10,6 +11,7 @@ function App() {
 
   useEffect(() => {
     fetch(`https://newsapi.org/v2/everything?q=${category}&from=${date}&sortBy&apiKey=bda2acb6731d4cd9bec7d1e2bd2a1494`)
+      // fetch('articles.json')
       .then(response => response.json())
       .then(data => {
         console.log(data);

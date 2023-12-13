@@ -29,10 +29,17 @@
   min-height: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  padding: 15px;
+  padding: 13px;
   outline: none;
 }
 
+.headerInput{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 20px;
+}
 
 @media only screen and (max-width: 768px) {
   .header {
@@ -46,6 +53,10 @@
     margin-top: 10px;
   }
   
+  .dateInput {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
 .newsCard{

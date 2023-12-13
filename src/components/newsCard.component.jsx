@@ -5,7 +5,9 @@ import { Fragment} from "react";
 const Card = (props) => {
   return (
     <Fragment>
-      {props.articlesData.map(({ title, description, urlToImage, url, author, source }, index) => (
+      {
+      props.articlesData == undefined ? <h1>No Data Found</h1> :
+      props.articlesData.map(({ title, description, urlToImage, url, author, source }, index) => (
         <div className="card" key={index}>
           <div className="imageContainer">
             <img src={urlToImage} alt={title} />
@@ -14,7 +16,7 @@ const Card = (props) => {
             <h3>{title}</h3>
             <p>
               {description}
-              <a href={url} target="_blank" rel="noopener noreferrer">
+              <a href={url} target="_blank" >
                 Read More
               </a>
             </p>
